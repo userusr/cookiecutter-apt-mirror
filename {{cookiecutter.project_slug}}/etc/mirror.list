@@ -1,0 +1,81 @@
+set base_path         $((BASE_PATH))
+
+set mirror_path       $base_path/mirror
+set skel_path         $base_path/skel
+set var_path          $base_path/var
+set cleanscript       $var_path/clean.sh
+
+set postmirror_script $var_path/postmirror.sh
+set run_postmirror    1
+
+set nthreads          20
+set _tilde            0
+
+###############################################################################
+
+# Mint
+# deb http://packages.linuxmint.com tina main upstream import backport
+# deb http://packages.linuxmint.com sonya main upstream import backport
+
+# Ubuntu bionic
+# deb http://mirror.yandex.ru/ubuntu bionic main restricted universe multiverse
+# deb http://mirror.yandex.ru/ubuntu bionic-updates main restricted universe multiverse
+# deb http://mirror.yandex.ru/ubuntu bionic-backports main restricted universe multiverse
+# deb http://security.ubuntu.com/ubuntu/ bionic-security main restricted universe multiverse
+# deb http://archive.canonical.com/ubuntu/ bionic partner
+
+# Ubuntu xenial
+# deb http://mirror.yandex.ru/ubuntu xenial main restricted universe multiverse
+# deb http://mirror.yandex.ru/ubuntu xenial-updates main restricted universe multiverse
+# deb http://mirror.yandex.ru/ubuntu xenial-backports main restricted universe multiverse
+# deb http://security.ubuntu.com/ubuntu/ xenial-security main restricted universe multiverse
+# deb http://archive.canonical.com/ubuntu/ xenial partner
+
+# Oracle VirtualBox
+# https://www.virtualbox.org/wiki/Linux_Downloads
+# deb-amd64 https://download.virtualbox.org/virtualbox/debian bionic contrib
+# deb-amd64 https://download.virtualbox.org/virtualbox/debian xenial contrib
+
+# NodeJS
+# https://github.com/nodesource/distributions/blob/master/README.md
+# sudo add-apt-repository  ppa:chris-lea/node.js
+# deb-amd64 https://deb.nodesource.com/node_12.x bionic main
+# deb-amd64 https://deb.nodesource.com/node_12.x xenial main
+
+# Remmina
+# https://remmina.org/how-to-install-remmina/
+# sudo apt-add-repository ppa:remmina-ppa-team/remmina-next
+# deb-amd64 http://ppa.launchpad.net/remmina-ppa-team/remmina-next/ubuntu bionic main
+# deb-amd64 http://ppa.launchpad.net/remmina-ppa-team/remmina-next/ubuntu xenial main
+
+# X2Go
+# https://wiki.x2go.org/doku.php/doc:installation:x2goserver
+# apt-add-repository ppa:x2go/stable
+# deb-amd64 http://ppa.launchpad.net/x2go/stable/ubuntu bionic main
+# deb-amd64 http://ppa.launchpad.net/x2go/stable/ubuntu xenial main
+
+# Puppet
+# https://puppet.com/docs/puppet/latest/puppet_platform.html
+# deb-amd64 http://apt.puppetlabs.com xenial puppet6
+# deb-amd64 http://apt.puppetlabs.com bionic puppet6
+
+# Zabbix
+# https://www.zabbix.com/ru/download
+# deb-amd64 http://repo.zabbix.com/zabbix/4.2/ubuntu xenial main
+# deb-amd64 http://repo.zabbix.com/zabbix/4.2/ubuntu bionic main
+
+# Gitlab
+# https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-gitlab-on-ubuntu-16-04
+# deb-amd64 https://packages.gitlab.com/gitlab/gitlab-ce/ubuntu/ xenial main
+# deb-amd64 https://packages.gitlab.com/gitlab/gitlab-ce/ubuntu/ bionic main
+
+# WineHQ
+# deb-amd64 https://dl.winehq.org/wine-builds/ubuntu/ bionic main
+# deb-amd64 https://dl.winehq.org/wine-builds/ubuntu/ xenial main
+
+# Docker
+# deb-amd64 https://download.docker.com/linux/ubuntu bionic stable
+# deb-amd64 https://download.docker.com/linux/ubuntu xenial stable
+
+# clean http://mirror.yandex.ru/ubuntu
+# clean https://download.virtualbox.org/virtualbox

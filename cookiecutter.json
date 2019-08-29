@@ -1,0 +1,4 @@
+{
+  "project_name": "apt local mirror",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}"
+}
