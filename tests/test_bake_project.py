@@ -25,7 +25,6 @@ def test_bake_with_defaults(cookies):
 
         found_toplevel_files = [f.basename for f in result.project.listdir()]
         assert "Makefile" in found_toplevel_files
-        assert "bin" in found_toplevel_files
         assert "etc" in found_toplevel_files
         assert "mirror" in found_toplevel_files
         assert "skel" in found_toplevel_files
