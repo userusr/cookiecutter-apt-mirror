@@ -7,9 +7,9 @@
 перечитал [руководство][create_local_repo] и решил немного автоматизировать этот
 процесс с помощью шаблона [cookiecutter][audreyr_cookiecutter]. Во-первых, я
 хочу чтобы конфигурация `apt-mirror` лежала вместе с зеркалом. Во-вторых, нужны
-открытые ключи репозиториев, чтобы `APT`  не ругался на невозможность проверки
-подписи. В-третьих, для работы `APT` по сети мне было достаточно встроенного в
-`python` модуля [http.server][python_http_server].
+открытые ключи репозиториев, чтобы `APT` не ругался на невозможность [проверки
+подписи][secureapt]. В-третьих, для работы `APT` по сети мне было достаточно
+встроенного в `python` модуля [http.server][python_http_server].
 
 Основная настройка [apt-mirror][github_apt_mirror] - каталог `base_path`, путь
 где будет создано зеркало. `base_path` устанавливается автоматически на корень
@@ -119,3 +119,4 @@ SHA1:
 [wiki_apt]: https://en.wikipedia.org/wiki/APT_(Package_Manager)
 [cookiecutter_install_page]: http://cookiecutter.readthedocs.org/en/latest/installation.html
 [python_http_server]: https://docs.python.org/3.6/library/http.server.html
+[secureapt]: https://wiki.debian.org/SecureApt
