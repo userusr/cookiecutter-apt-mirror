@@ -17,7 +17,7 @@ export PRINT_HELP_PYSCRIPT
 help:
 	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
 
-test:
+test: ## test template
 	pytest
 
 bake: test ## generate project using defaults
