@@ -1,5 +1,7 @@
 # Cookiecutter apt-mirror
 
+[![Build Status](https://travis-ci.org/userusr/cookiecutter-apt-mirror.svg?branch=master)](https://travis-ci.org/userusr/cookiecutter-apt-mirror)
+
 Шаблон [cookiecutter][audreyr_cookiecutter] для создания локальной копии
 репозиториев [APT][wiki_apt].
 
