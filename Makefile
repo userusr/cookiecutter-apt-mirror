@@ -17,7 +17,10 @@ export PRINT_HELP_PYSCRIPT
 help:
 	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
 
-bake: ## generate project using defaults
+test:
+	pytest
+
+bake: test ## generate project using defaults
 	cookiecutter $(BAKE_OPTIONS) . --overwrite-if-exists
 
 watch: bake ## generate project using defaults and watch for changes
